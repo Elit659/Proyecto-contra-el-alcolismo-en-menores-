@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Venta de Alcohol a Menores | Nicaragua</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Sección de Reporte */
+        #reporte {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #219a52;
+        }
+
+        /* Sección Legal */
+        .legal-card {
+            background-color: white;
+            padding: 20px;
+            border-left: 5px solid #2980b9;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        /* Sección Salud */
+        .salud-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .salud-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .salud-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        /* Recursos */
+        .recursos {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn-descarga {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Protegiendo a los Jóvenes Nicaragüenses</h1>
+        <p>Reporta la venta ilegal de alcohol a menores</p>
+    </header>
+
+    <div class="container">
+        <!-- Sección de Reporte -->
+        <section id="reporte">
+            <h2>Reportar un Caso</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label>Nombre del Establecimiento:</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección:</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Descripción del Incidente:</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar Reporte <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </section>
+
+        <!-- Sección Legal -->
+        <section id="legal">
+            <h2>Marco Legal en Nicaragua</h2>
+            <div class="legal-card">
+                <h3>Artículo 320 - Código Penal</h3>
+                <p>Multa de 50 a 100 salarios mínimos o prisión de 1 a 3 años por venta a menores.</p>
+            </div>
+            <div class="legal-card">
+                <h3>Ley 287 - Protección a la Niñez</h3>
+                <p>Clausura inmediata de establecimientos infractores.</p>
+            </div>
+        </section>
+
+        <!-- Sección Salud -->
+        <section id="salud">
+            <h2>Consecuencias en la Salud</h2>
+            <div class="salud-grid">
+                <div class="salud-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Cirrosis Hepática">
+                    <h3>Daño Hepático</h3>
+                    <p>El consumo temprano puede causar cirrosis.</p>
+                </div>
+                <div class="salud-card">
+                    <img src="https://via.placeholder.com/400x200" alt="Cerebro">
+                    <h3>Daño Cerebral</h3>
+                    <p>Afeta el desarrollo del sistema nervioso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recursos -->
+        <section id="recursos">
+            <h2>Recursos</h2>
+            <div class="recursos">
+                <a href="#" class="btn-descarga">Descargar Código Penal</a>
+                <a href="#" class="btn-descarga">Guía de Denuncia</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Proyecto Universitario - Derecho UNCSM 2025</p>
+    </footer>
+
+    <script>
+        // Validación de Formulario
+        document.getElementById('reportForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (confirm('¿Estás seguro de enviar este reporte?')) {
+                alert('Reporte enviado. ¡Gracias por tu colaboración!');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>
